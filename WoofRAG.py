@@ -1,8 +1,10 @@
 import openai
 import os
+from dotenv import load_dotenv
 
 # Replace 'your-api-key' with your actual OpenAI API key
-openai.api_key = 'your-api-key'
+load_dotenv()
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 # Example function to call the OpenAI API
 def ask_openai(prompt):
