@@ -1,18 +1,23 @@
 from openai import OpenAI
 import os
+from dotenv import load_dotenv
 
-openai.api_key = os.getenv('OPENAI_API_KEY')
+load_dotenv()
+client = OpenAI(
+    # This is the default and can be omitted
+    api_key=os.environ.get("OPENAI_API_KEY"),
+)
 
-# Example function to call the OpenAI API
-def ask_openai(prompt):
-    response = client.chat.completions.create(model="gpt-4",
+
+completion = client.chat.completions.create(
+    model="gpt-4o-mini",
     messages=[
         {"role": "system", "content": "You are a helpful assistant."},
-        {"role": "user", "content": prompt},
-    ])
-    return response.choices[0].message.content
+        {
+            "role": "user",
+            "content": "Write a haiku about recursion in programming."
+        }
+    ]
+)
 
-if __name__ == "__main__":
-    prompt = input("Enter your prompt: ")
-    response = ask_openai(prompt)
-    print("OpenAI Response:", response)
+print(completion.choices[0].message.content)
