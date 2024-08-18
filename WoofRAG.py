@@ -8,16 +8,19 @@ client = OpenAI(
     api_key=os.environ.get("OPENAI_API_KEY"),
 )
 
+file = open("ContextPrompt.txt", "r")
+context_prompt = file.read()
+while True:
+    prompt = input("\nWhat do you want to ask your dog ?: \n")
+    completion = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[
+            {"role": "system", "content": context_prompt},
+            {
+                "role": "user",
+                "content": prompt
+            }
+        ]
+    )
 
-completion = client.chat.completions.create(
-    model="gpt-4o-mini",
-    messages=[
-        {"role": "system", "content": "You are a helpful assistant."},
-        {
-            "role": "user",
-            "content": "Write a haiku about recursion in programming."
-        }
-    ]
-)
-
-print(completion.choices[0].message.content)
+    print(completion.choices[0].message.content + '\n')
