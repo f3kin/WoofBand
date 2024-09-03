@@ -1,0 +1,6 @@
+- age
+- name
+- description of dog
+- describe your house
+- usual activities
+- when do you feed your dog
