@@ -1,5 +1,5 @@
 # The 'Woof Band'
-App Website - https://woof-band.vercel.app
+App Website - Coming Soon
 ### What is it?
 - I'm developing a 'smart' dog collar that I hope will improve how we care for our pets by bridging the communication gap between humans and dogs. 
 

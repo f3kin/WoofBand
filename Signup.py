@@ -1,7 +1,0 @@
-print("Hello friend, thank you for using Woof Band ! Please enter a few details about yourself:")
-user_name = input("What is your name: ")
-user_age = input("What is your age: ")
-print("Great ! Now more importantly, tell me about your dog:")
-dog_name = input("What is your dog's name: ")
-dog_gender = input("Is your dog male or female: ")
-dog_breed = input("What is your dog's breed? ")
