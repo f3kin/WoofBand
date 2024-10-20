@@ -8,10 +8,19 @@ App Website - Coming Soon
 - For example, when a dog needs to use the bathroom, its skin temperature rises, its heart rate elevates, and it may begin to whine, allowing us to notify the owner so they can let their pet outside. 
 
 ### The interface
-- To facilitate the communication between pet and owner, I plan to use a similar UX to the best-selling 'Tamagotchi' toy, so that the communication is 
-delivered in a user-friendly, casual manner. 
+- To facilitate the communication between pet and owner, I plan to use a similar UX to the best-selling 'Tamagotchi' toy, so that the communication is delivered in a user-friendly, casual manner. 
 
 - This will involve custom animal emojis and home screen interfaces for Apple devices.
+
+### Operations
+- Start the backend server:
+  - cd backend
+  - edit 'name', 'date', 'experiment' in server.py
+  - python3 server.py
+- Run the signup website:
+  - cd frontend
+  - npm run dev
+  - visit http://localhost:3000 or https://woof-band.vercel.app/ (public version)
 
 ### Contribution
 If you're interested in following the project or getting involved, feel free to reach out on LinkedIn - https://www.linkedin.com/in/finlayekins/
